@@ -429,9 +429,11 @@
 
     .pillars-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 1.5rem;
     }
+    .pillar { grid-column: span 2; }
+    .pillar.pillar-wide { grid-column: span 3; }
 
     .pillar {
       background: var(--cream);
@@ -443,6 +445,8 @@
     }
     .pillar:nth-child(2) { border-color: var(--gold); }
     .pillar:nth-child(3) { border-color: var(--teal-dark); }
+    .pillar:nth-child(4) { border-color: var(--teal-light); }
+    .pillar:nth-child(5) { border-color: var(--gold-dark); }
     .pillar:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 40px rgba(13,110,114,0.12);
@@ -1031,6 +1035,7 @@
     @media (max-width: 900px) {
       .mission-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .pillars-grid { grid-template-columns: 1fr; }
+      .pillar, .pillar.pillar-wide { grid-column: auto; }
       .approach-steps { grid-template-columns: 1fr; }
       .team-card { grid-template-columns: 1fr; gap: 2rem; }
       .team-portrait { max-width: 200px; }
@@ -1178,7 +1183,7 @@
       <span>Uncommon Abundance.</span>
     </h1>
     <p class="hero-tagline">
-      Our mission is to connect and nourish Henderson County/Mud Creek Watershed by reimagining overlooked lands between neighborhoods and habitats as a growing network of ecological, social, inspiring, and resilient corridors.
+      Return overlooked, under-loved lands to community hands &mdash; to harvest, heal, create, connect, and protect forever
     </p>
     <div class="hero-cta">
       <a href="#mission" class="btn btn-primary">Our Mission</a>
@@ -1202,7 +1207,7 @@
       <h2>From <em>overlooked</em><br>to <em>overflowing</em></h2>
     </div>
     <div class="mission-right reveal reveal-delay-2">
-      <p>Cultivated Commons is a nonprofit conservation land trust transforming spaces we have learned to walk past without a second thought: utility corridors, development setbacks, abandoned lots, brownfields, and other devalued locations. The value we rebuild is multilayered, from wildlife habitat and biodiversity to stormwater management and carbon sequestration to food production and interactive art. Utilizing permaculture design and people power, we restore and cultivate these forgotten lands to social and ecological abundance: public access commons that connect and nourish our communities.</p>
+      <p>Cultivated Commons is a nonprofit community land trust transforming spaces we have learned to walk past without a second thought: utility corridors, development setbacks, abandoned lots, brownfields, and other devalued locations. We restore lands to include wildlife habitat and biodiversity, stormwater management, carbon sequestration, food production and public art. Utilizing permaculture design and people power, we cultivate these forgotten lands to social and ecological abundance: Commons stewarded and governed by the same neighbors who enjoy them.</p>
     </div>
   </div>
 </section>
@@ -1211,14 +1216,14 @@
 <section class="pillars">
   <div class="pillars-inner">
     <div class="pillars-header reveal">
-      <p class="section-label">What Does it Mean to Cultivate a Commons?</p>
-      <h2>Community value<br>in every direction</h2>
+      <p class="section-label">What is a Cultivated Commons?</p>
+      <h2>Our Commons<br>cultivate&hellip;</h2>
     </div>
     <div class="pillars-grid">
       <div class="pillar reveal reveal-delay-1">
         <div class="pillar-num">01</div>
         <h3>Social and Ecological Corridors</h3>
-        <p>Fragmented habitat across urban and suburban landscapes can connect and support native wildlife movement, pollinator networks, and biodiversity recovery. These landscapes can link human habitats too. The sites we cultivate become verdant neighborhood passageways.</p>
+        <p>Our commons are made for people as much as for wildlife. Each one is designed for human occupation and interaction, and is open and accessible to the neighborhoods around it. That might be as simple as a trail winding through the trees, or as grand as a large pavilion for gathering. Along the way, these corridors reconnect fragmented habitat, supporting native wildlife movement, pollinator networks, and biodiversity recovery.</p>
       </div>
       <div class="pillar reveal reveal-delay-2">
         <div class="pillar-num">02</div>
@@ -1229,6 +1234,16 @@
         <div class="pillar-num">03</div>
         <h3>Food Forests</h3>
         <p>Speaking of eating, we prioritize sites in walking distance to neighborhoods. We cultivate a wide variety of important ecosystem plants, and we make sure that many of them are delicious and medicinal for the folks who live nearby. Imagine, instead of driving to the convenience store for a processed snack in a plastic bag, strolling to your local park to see what might be fruiting.</p>
+      </div>
+      <div class="pillar pillar-wide reveal reveal-delay-1">
+        <div class="pillar-num">04</div>
+        <h3>Public Art and Placemaking</h3>
+        <p>Whether it's decorative brackets on a shelter, painted lanterns, unique wildlife habitats, or sculptures, we commit to creating spaces with a true sense of place. Every commons should feel like it belongs to its own neighborhood and could not be mistaken for anywhere else.</p>
+      </div>
+      <div class="pillar pillar-wide reveal reveal-delay-2">
+        <div class="pillar-num">05</div>
+        <h3>Community Conversation</h3>
+        <p>A commons only works when it fits the people it serves. We facilitate conversations with the community each commons will serve, and weave their unique needs and character into the design, so what we build reflects the place and the people who will use it.</p>
       </div>
     </div>
   </div>
@@ -1259,7 +1274,7 @@
 <section class="approach" id="approach">
   <div class="approach-inner">
     <p class="section-label reveal">How We Work</p>
-    <h2 class="reveal reveal-delay-1">Legally sound.<br>Community rooted.<br>Ecologically driven.</h2>
+    <h2 class="reveal reveal-delay-1">Our model is legally sound, community owned, and ecologically driven.</h2>
     <div class="approach-steps">
       <div class="step reveal reveal-delay-1">
         <div class="step-num">Step 01</div>
@@ -1268,18 +1283,28 @@
       </div>
       <div class="step reveal reveal-delay-2">
         <div class="step-num">Step 02</div>
-        <h3>Design Ecologically</h3>
-        <p>Using permaculture design principles, we create layered food forest systems engineered to deliver measurable stormwater, habitat, and biodiversity outcomes.</p>
+        <h3>Listening and Facilitation</h3>
+        <p>We engage the community to learn what is lacking in their neighborhood, and just as importantly, what is already celebrated there. Those needs, stories, and strengths guide everything that follows.</p>
       </div>
       <div class="step reveal reveal-delay-3">
         <div class="step-num">Step 03</div>
-        <h3>Install with Community</h3>
-        <p>We guide students, volunteers, and neighbors to install the commons infrastructure — building relationships and skills while establishing the ecological foundation.</p>
+        <h3>Design Ecologically</h3>
+        <p>Using permaculture design principles, we create layered food forest systems engineered to deliver measurable stormwater, habitat, and biodiversity outcomes.</p>
       </div>
       <div class="step reveal reveal-delay-4">
         <div class="step-num">Step 04</div>
+        <h3>Install with Community</h3>
+        <p>We guide students, volunteers, and neighbors to install the commons infrastructure — building relationships and skills while establishing the ecological foundation.</p>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num">Step 05</div>
         <h3>Protect in Perpetuity</h3>
         <p>Conservation easements are a proven way for land trusts to legally protect restored lands from development forever — while community stewards supply the hearts and hands to care for them.</p>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-num">Step 06</div>
+        <h3>Supporting</h3>
+        <p>CC helps establish a governing body and stewards to provide for the continuing care of each commons, while remaining a repository of knowledge and resources the network can draw on to maintain and grow their commons.</p>
       </div>
     </div>
   </div>
@@ -1309,7 +1334,7 @@
           <h3>Joey Burnett</h3>
           <p class="team-role">Co-Founder &amp; Chief Steward</p>
           <p>Joey is an architect, maker, and permaculture designer based in Hendersonville, NC, with a deep commitment to ecological restoration in overlooked urban spaces. Through his decade of work in architecture, he saw an unfinished picture on each project — how will this project integrate into the community and environment at large.</p>
-          <p>With a background spanning ecological design, community organizing, and conservation strategy, Joey founded The Cultivated Commons to prove that the most transformative land is often the land no one else is looking at and how these lands can become the shared commons that define a community.</p>
+          <p>With a background spanning ecological design, community organizing, and conservation strategy, Joey cofounded The Cultivated Commons to prove that the most transformative land is often the land no one else is looking at and how these lands can become the shared commons that define a community.</p>
           <div class="team-tags">
             <span class="tag">Permaculturist</span>
             <span class="tag gold">Architect</span>
@@ -1331,13 +1356,13 @@
         <div class="team-bio reveal reveal-delay-2">
           <h3>Aweed Nyoka</h3>
           <p class="team-role">Co-Founder &amp; Chief Naturalist</p>
-          <p>Aweed first learnt what not to do as a Marine Corps Officer, witnessing the more-than-human toll of the U.S. military occupation in Afghanistan. After earning two masters degrees in environmental policy from Columbia University, he promptly worked minimum wage, on-the-ground ecology jobs because they were more fun.</p>
-          <p>With biodiversity as a north star and humans-are-nature as an ethos, Aweed brings experience as a land trust manager, wildlife preserve ranger, foraging school founder, climate activist, habitat restorationist, and interpretive guide to help Cultivated Commons do rad projects on underloved land. He encourages you to eat kudzu.</p>
+          <p>As a Marine Corps officer and climate scientist, Aweed has seen the darkness we spread when we view strangers as suspect and nature as a commodity. His goal in cofounding Cultivated Commons is to learn, practice, and share better ways to relate to our neighbors &mdash; human and beyond &mdash; and to the land we all share.</p>
+          <p>From protecting hikers and endangered species as a ranger, to risking arrest in non-violent activism, to restoring fire-blighted mountainscapes, Aweed has served the more-than-human world for years. Only for the last few has he called Hendersonville home, but he is honored to continue serving here by bringing Commons back to the people.</p>
           <div class="team-tags">
-            <span class="tag">Permaculturist</span>
-            <span class="tag cream">Storyteller</span>
-            <span class="tag gold">Dad</span>
+            <span class="tag">Ecologist</span>
             <span class="tag teal">Carver</span>
+            <span class="tag cream">Storyteller</span>
+            <span class="tag gold">Solarpunk</span>
           </div>
         </div>
       </div>
